@@ -1,7 +1,7 @@
 ## Type of Variables
 There are mutliple ways to categorise variables in java. 
 
-### Categorisation on the basis of type
+### Categorisation on the basis of type of value
 
 **Primitive Variable** 
 
@@ -52,4 +52,38 @@ The reference variable is stored in stack while the object is stored in the heap
                           | name = "Buddy" |
                           ------------------
 
+```
+
+### Categorisation on the basis of variable behaviour
+
+**Instance Variables**
+
+**Static Variables**
+
+**Local Variables**
+
+A local variable is a temporary placeholder for data that can only be accessed within the method or block in which it is declared.
+
+
+Local variables will be created while executing the block in which it was declared, once the block execution completes automatically the local variable will be destroyed and hence the scope of local variable is the block in which it was declared. 
+
+JVM doesn't provide the default values for local variables and must be initialised before the usage.
+
+Where are the local variables stored?
+
+Stored inside the stack memory.
+
+**Thread Safety of local variables**
+
+Since the local variable lives in stack, each thread has its own copy and no other thread can directly touch it, the local variables are considered thread safe.
+
+```lua
+Thread A (Stack)                Thread B (Stack)
++----------------+              +----------------+
+| localVar = 10  |              | localVar = 10  |
++----------------+              +----------------+
+         |                              |
+         V                              V
+   (Primitive value)              (Primitive value)
+     [No sharing]                   [No sharing]
 ```
