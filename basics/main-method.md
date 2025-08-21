@@ -28,6 +28,18 @@ What is String array as the method input?
 
 These are command line argument.
 
+**What are command line arguments?**
+Arguments that are passed through command line are known as command line argument.
+
+```java
+public static void main(String[] args){
+    // you can use the args like below
+    args[0];
+    args[1];
+    args.length
+}
+```
+
 > Any changes in the declaration of the main method will results in RuntimeException saying `NoSuchMethodError: main`
 
 
